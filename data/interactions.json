@@ -1,0 +1,245 @@
+[
+  {
+    "timestamp": 1762954960,
+    "user_id": "954573",
+    "problem_id": 14,
+    "selected": 1,
+    "correct": false,
+    "predicted_prob": 0.499,
+    "time_taken": 6
+  },
+  {
+    "timestamp": 1762954974,
+    "user_id": "954573",
+    "problem_id": 28,
+    "selected": 1,
+    "correct": false,
+    "predicted_prob": 0.493,
+    "time_taken": 8
+  },
+  {
+    "timestamp": 1762955030,
+    "user_id": "954573",
+    "problem_id": 55,
+    "selected": 2,
+    "correct": false,
+    "predicted_prob": 0.503,
+    "time_taken": 12
+  },
+  {
+    "timestamp": 1762955034,
+    "user_id": "954573",
+    "problem_id": 33,
+    "selected": 3,
+    "correct": false,
+    "predicted_prob": 0.504,
+    "time_taken": 1
+  },
+  {
+    "timestamp": 1762955043,
+    "user_id": "954573",
+    "problem_id": 20,
+    "selected": 1,
+    "correct": false,
+    "predicted_prob": 0.45,
+    "time_taken": 6
+  },
+  {
+    "timestamp": 1762955055,
+    "user_id": "954573",
+    "problem_id": 63,
+    "selected": 1,
+    "correct": false,
+    "predicted_prob": 0.382,
+    "time_taken": 10
+  },
+  {
+    "timestamp": 1762955061,
+    "user_id": "954573",
+    "problem_id": 40,
+    "selected": 3,
+    "correct": false,
+    "predicted_prob": 0.326,
+    "time_taken": 4
+  },
+  {
+    "timestamp": 1762955073,
+    "user_id": "954573",
+    "problem_id": 65,
+    "selected": 2,
+    "correct": false,
+    "predicted_prob": 0.281,
+    "time_taken": 10
+  },
+  {
+    "timestamp": 1762955106,
+    "user_id": "954573",
+    "problem_id": 8,
+    "selected": 0,
+    "correct": true,
+    "predicted_prob": 0.247,
+    "time_taken": 29
+  },
+  {
+    "timestamp": 1762955130,
+    "user_id": "954573",
+    "problem_id": 45,
+    "selected": 0,
+    "correct": false,
+    "predicted_prob": 0.332,
+    "time_taken": 21
+  },
+  {
+    "timestamp": 1762955135,
+    "user_id": "954573",
+    "problem_id": 98,
+    "selected": 1,
+    "correct": false,
+    "predicted_prob": 0.277,
+    "time_taken": 3
+  },
+  {
+    "timestamp": 1762955164,
+    "user_id": "954573",
+    "problem_id": 61,
+    "selected": 0,
+    "correct": false,
+    "predicted_prob": 0.244,
+    "time_taken": 27
+  },
+  {
+    "timestamp": 1762955172,
+    "user_id": "954573",
+    "problem_id": 10,
+    "selected": 3,
+    "correct": false,
+    "predicted_prob": 0.215,
+    "time_taken": 5
+  },
+  {
+    "timestamp": 1762955177,
+    "user_id": "954573",
+    "problem_id": 27,
+    "selected": 1,
+    "correct": false,
+    "predicted_prob": 0.185,
+    "time_taken": 3
+  },
+  {
+    "timestamp": 1762955192,
+    "user_id": "954573",
+    "problem_id": 75,
+    "selected": 3,
+    "correct": true,
+    "predicted_prob": 0.168,
+    "time_taken": 6
+  },
+  {
+    "timestamp": 1762955198,
+    "user_id": "954573",
+    "problem_id": 58,
+    "selected": 0,
+    "correct": false,
+    "predicted_prob": 0.24,
+    "time_taken": 3
+  },
+  {
+    "timestamp": 1762955217,
+    "user_id": "954573",
+    "problem_id": 99,
+    "selected": 2,
+    "correct": false,
+    "predicted_prob": 0.212,
+    "time_taken": 16
+  },
+  {
+    "timestamp": 1763300487,
+    "user_id": "480467",
+    "problem_id": 24,
+    "selected": 2,
+    "correct": false,
+    "predicted_prob": 0.5,
+    "time_taken": 7
+  },
+  {
+    "timestamp": 1763300495,
+    "user_id": "480467",
+    "problem_id": 5,
+    "selected": 3,
+    "correct": false,
+    "predicted_prob": 0.5,
+    "time_taken": 6
+  },
+  {
+    "timestamp": 1763303146,
+    "user_id": "122143",
+    "problem_id": 51,
+    "selected": 0,
+    "correct": true,
+    "predicted_prob": 0.5,
+    "time_taken": 37
+  },
+  {
+    "timestamp": 1763303157,
+    "user_id": "122143",
+    "problem_id": 36,
+    "selected": 2,
+    "correct": false,
+    "predicted_prob": 0.5,
+    "time_taken": 9
+  },
+  {
+    "timestamp": 1763303168,
+    "user_id": "122143",
+    "problem_id": 36,
+    "selected": 2,
+    "correct": false,
+    "predicted_prob": 0.401,
+    "time_taken": 20
+  },
+  {
+    "timestamp": 1763306171,
+    "user_id": "159681",
+    "problem_id": 13,
+    "selected": 1,
+    "correct": false,
+    "predicted_prob": 0.525,
+    "time_taken": 11
+  },
+  {
+    "timestamp": 1763306179,
+    "user_id": "159681",
+    "problem_id": 16,
+    "selected": 0,
+    "correct": true,
+    "predicted_prob": 0.496,
+    "time_taken": 6
+  },
+  {
+    "timestamp": 1763306184,
+    "user_id": "159681",
+    "problem_id": 46,
+    "selected": 2,
+    "correct": false,
+    "predicted_prob": 0.522,
+    "time_taken": 3
+  },
+  {
+    "timestamp": 1763306192,
+    "user_id": "159681",
+    "problem_id": 17,
+    "selected": 0,
+    "correct": true,
+    "predicted_prob": 0.494,
+    "time_taken": 6
+  },
+  {
+    "timestamp": 1763306942,
+    "user_id": "936277",
+    "problem_id": 46,
+    "selected": 3,
+    "correct": false,
+    "predicted_prob": 0.499,
+    "time_taken": 6
+  }
+]

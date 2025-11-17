@@ -1,0 +1,6 @@
+flask
+flask-cors
+gunicorn
+itsdangerous==2.1.2
+Werkzeug==2.3.7
+Jinja2==3.1.2

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>DSA Recommender</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body { 
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0a0e27;
+      min-height: 100vh;
+      padding: 40px 20px;
+      position: relative;
+      color: #e4e4e7;
+      line-height: 1.6;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(ellipse at 10% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 90% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 48px;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .header h1 {
+      font-size: 2.5em;
+      background: linear-gradient(135deg, #a5b4fc 0%, #818cf8 50%, #6366f1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .header .tagline {
+      color: #94a3b8;
+      font-size: 1em;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+    }
+
+    /* Cards */
+    .card { 
+      background: rgba(30, 41, 59, 0.6);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(148, 163, 184, 0.1);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      animation: slideUp 0.6s ease-out;
+      position: relative;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.5), transparent);
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+      border-color: rgba(139, 92, 246, 0.3);
+    }
+
+    .card h3 {
+      color: #f1f5f9;
+      font-size: 1.4em;
+      margin-bottom: 20px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+    }
+
+    /* User Card */
+    .user-section {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    #username {
+      flex: 1;
+      min-width: 220px;
+      padding: 14px 18px;
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      border-radius: 10px;
+      font-size: 1em;
+      transition: all 0.3s ease;
+      background: rgba(15, 23, 42, 0.6);
+      color: #e4e4e7;
+      font-weight: 500;
+    }
+
+    #username::placeholder {
+      color: #64748b;
+    }
+
+    #username:focus {
+      outline: none;
+      border-color: rgba(139, 92, 246, 0.6);
+      background: rgba(15, 23, 42, 0.8);
+      box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+    }
+
+    /* Buttons */
+    button {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 10px;
+      font-size: 0.95em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.3px;
+    }
+
+    button::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    button:hover::after {
+      width: 300px;
+      height: 300px;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    /* Primary button */
+    button:not(#logoutBtn):not(.choice-btn):not(.skip-btn) {
+      background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+      color: white;
+      box-shadow: 0 4px 16px rgba(139, 92, 246, 0.3);
+    }
+
+    button:not(#logoutBtn):not(.choice-btn):not(.skip-btn):hover {
+      box-shadow: 0 6px 24px rgba(139, 92, 246, 0.5);
+      transform: translateY(-1px);
+    }
+
+    #logoutBtn {
+      background: rgba(248, 113, 113, 0.2);
+      color: #fca5a5;
+      border: 1px solid rgba(248, 113, 113, 0.3);
+    }
+
+    #logoutBtn:hover {
+      background: rgba(248, 113, 113, 0.3);
+      border-color: rgba(248, 113, 113, 0.5);
+    }
+
+    .skip-btn {
+      background: rgba(71, 85, 105, 0.3);
+      color: #cbd5e1;
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      margin-top: 16px;
+    }
+
+    .skip-btn:hover {
+      background: rgba(71, 85, 105, 0.5);
+      border-color: rgba(148, 163, 184, 0.3);
+    }
+
+    /* User info stats */
+    #userInfo {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+      padding: 16px 20px;
+      border-radius: 12px;
+      font-size: 0.95em;
+      line-height: 1.8;
+      color: #cbd5e1;
+      font-weight: 500;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+    }
+
+    .small { 
+      font-size: 0.9em;
+      color: #94a3b8;
+      font-weight: 400;
+    }
+
+    /* Problem Card */
+    #problemCard {
+      background: rgba(30, 41, 59, 0.7);
+      border-color: rgba(139, 92, 246, 0.2);
+    }
+
+    #problemArea h3 {
+      color: #a5b4fc;
+      font-size: 1.5em;
+      margin-bottom: 16px;
+      font-weight: 600;
+      letter-spacing: -0.4px;
+    }
+
+    #problemArea p {
+      color: #cbd5e1;
+      font-size: 1.05em;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    /* Choices */
+    #choicesArea {
+      margin: 28px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .choice-btn, #choicesArea button {
+      background: rgba(30, 41, 59, 0.6);
+      color: #e4e4e7;
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      text-align: left;
+      padding: 16px 20px;
+      font-size: 1em;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .choice-btn:hover, #choicesArea button:hover {
+      background: rgba(139, 92, 246, 0.15);
+      border-color: rgba(139, 92, 246, 0.5);
+      transform: translateX(4px);
+      box-shadow: 0 4px 16px rgba(139, 92, 246, 0.2);
+    }
+
+    /* Timer */
+    #timer {
+      background: linear-gradient(135deg, rgba(251, 191, 36, 0.15) 0%, rgba(245, 158, 11, 0.15) 100%);
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      color: #fbbf24;
+      margin-top: 16px;
+      font-size: 0.9em;
+      border: 1px solid rgba(251, 191, 36, 0.3);
+      letter-spacing: 0.5px;
+    }
+
+    /* Leaderboard */
+    #leaderboard {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    #leaderboard > div {
+      background: rgba(30, 41, 59, 0.5);
+      padding: 16px 20px;
+      border-radius: 12px;
+      font-weight: 500;
+      color: #cbd5e1;
+      border: 1px solid rgba(148, 163, 184, 0.15);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #leaderboard > div::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, rgba(139, 92, 246, 0.5), rgba(99, 102, 241, 0.5));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    #leaderboard > div:hover {
+      background: rgba(30, 41, 59, 0.7);
+      border-color: rgba(139, 92, 246, 0.3);
+      transform: translateX(4px);
+    }
+
+    #leaderboard > div:hover::before {
+      opacity: 1;
+    }
+
+    #leaderboard > div:nth-child(1) {
+      background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(245, 158, 11, 0.1));
+      border-color: rgba(251, 191, 36, 0.3);
+      color: #fbbf24;
+    }
+
+    #leaderboard > div:nth-child(1)::before {
+      background: linear-gradient(180deg, #fbbf24, #f59e0b);
+    }
+
+    #leaderboard > div:nth-child(2) {
+      background: linear-gradient(135deg, rgba(203, 213, 225, 0.15), rgba(148, 163, 184, 0.1));
+      border-color: rgba(203, 213, 225, 0.3);
+      color: #cbd5e1;
+    }
+
+    #leaderboard > div:nth-child(2)::before {
+      background: linear-gradient(180deg, #cbd5e1, #94a3b8);
+    }
+
+    #leaderboard > div:nth-child(3) {
+      background: linear-gradient(135deg, rgba(217, 119, 6, 0.15), rgba(180, 83, 9, 0.1));
+      border-color: rgba(217, 119, 6, 0.3);
+      color: #fdba74;
+    }
+
+    #leaderboard > div:nth-child(3)::before {
+      background: linear-gradient(180deg, #fdba74, #d97706);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: rgba(15, 23, 42, 0.5);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(139, 92, 246, 0.5);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(139, 92, 246, 0.7);
+    }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 48px 20px;
+      color: #94a3b8;
+      font-size: 1.1em;
+    }
+
+    .empty-state b {
+      color: #cbd5e1;
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.2em;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 16px;
+      }
+
+      .header h1 {
+        font-size: 2em;
+      }
+      
+      .card {
+        padding: 24px 20px;
+        border-radius: 14px;
+      }
+
+      button {
+        width: 100%;
+      }
+
+      .user-section {
+        flex-direction: column;
+      }
+
+      #username {
+        width: 100%;
+      }
+    }
+
+    /* Subtle grid pattern overlay */
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+      pointer-events: none;
+      z-index: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    
+    <!-- Header -->
+    <div class="header">
+      <h1>Smart DSA Recommender</h1>
+      <div class="tagline">Intelligent problem selection powered by adaptive learning</div>
+    </div>
+
+    <!-- User Login Card -->
+    <div class="card">
+      <div class="user-section">
+        <input id="username" placeholder="Enter username" />
+        <button onclick="createUser()">Start</button>
+        <button id="logoutBtn" onclick="logout()" style="display:none;">Logout</button>
+      </div>
+      <div id="userInfo" class="small"></div>
+    </div>
+
+    <!-- Problem Card -->
+    <div class="card" id="problemCard" style="display:none;">
+      <h3>Your Next Problem</h3>
+      <div id="problemArea"></div>
+      <div id="choicesArea"></div>
+      <div id="timer" class="small"></div>
+      <button class="skip-btn" onclick="skipProblem()">Skip</button>
+    </div>
+
+    <!-- Leaderboard Card -->
+    <div class="card" id="leaderboardCard" style="display:none;">
+      <h3>Leaderboard</h3>
+      <div id="leaderboard"></div>
+    </div>
+
+  </div>
+
+<script>
+
+let currentUser = null;
+let currentProblem = null;
+let problemStart = null;
+
+let seen = new Set();
+let lastTopic = null;
+
+// ===============================
+// CREATE USER
+// ===============================
+async function createUser() {
+  const name = document.getElementById("username").value || "guest";
+
+  const res = await fetch("/api/create_user", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ username: name })
+  });
+
+  const j = await res.json();
+  currentUser = j.user_id;
+  localStorage.setItem("dsa_user", currentUser);
+
+  document.getElementById("logoutBtn").style.display = "inline-block";
+  document.getElementById("problemCard").style.display = "block";
+  document.getElementById("leaderboardCard").style.display = "block";
+
+  loadUser();
+  getRecommendation();
+  loadLeaderboard();
+}
+
+// ===============================
+// LOGOUT
+// ===============================
+function logout() {
+  localStorage.removeItem("dsa_user");
+  location.reload();
+}
+
+// ===============================
+// LOAD USER
+// ===============================
+async function loadUser() {
+  const res = await fetch("/api/get_user/" + currentUser);
+  const j = await res.json();
+
+  document.getElementById("userInfo").innerHTML =
+    "User: " + j.user.username +
+    "<br>XP: " + j.user.xp +
+    " | Level: " + j.user.level +
+    " | Streak: " + j.user.streak;
+}
+
+// ===============================
+// GET PROBLEM (WITH last_topic + seen)
+// ===============================
+async function getRecommendation() {
+  const seenList = Array.from(seen).join(",");
+  const url =
+    `/api/recommend/${currentUser}?seen=${encodeURIComponent(seenList)}&last_topic=${encodeURIComponent(lastTopic || "")}`;
+
+  const res = await fetch(url);
+  const j = await res.json();
+
+  if (!j.recs || j.recs.length === 0) {
+    document.getElementById("problemArea").innerHTML = "<div class='empty-state'><b>No more problems available</b>You've completed everything!</div>";
+    return;
+  }
+
+  const r = j.recs[0];
+  currentProblem = r;
+  showProblem(r);
+}
+
+// ===============================
+// DISPLAY PROBLEM
+// ===============================
+function showProblem(p) {
+  document.getElementById("problemArea").innerHTML =
+    `<h3>${p.title}</h3><p>${p.prompt}</p>`;
+
+  const area = document.getElementById("choicesArea");
+  area.innerHTML = "";
+
+  p.choices.forEach((choice, idx) => {
+    let btn = document.createElement("button");
+    btn.innerText = choice;
+    btn.onclick = () => submitAnswer(idx);
+    area.appendChild(btn);
+  });
+
+  // Save topic for next request
+  lastTopic = p.topic;
+
+  // Timer
+  problemStart = Date.now();
+  startTimer();
+}
+
+// ===============================
+// TIMER
+// ===============================
+function startTimer() {
+  let timerEl = document.getElementById("timer");
+
+  clearInterval(window._t);
+  window._t = setInterval(() => {
+    const elapsed = Math.floor((Date.now() - problemStart) / 1000);
+    timerEl.innerText = "⏱ " + elapsed + " sec";
+  }, 500);
+}
+
+// ===============================
+// SUBMIT ANSWER
+// ===============================
+async function submitAnswer(idx) {
+  clearInterval(window._t);
+
+  const timeTaken = Math.floor((Date.now() - problemStart) / 1000);
+
+  const res = await fetch("/api/submit", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+      user_id: currentUser,
+      problem_id: currentProblem.problem_id,
+      selected_index: idx,
+      time_taken: timeTaken
+    })
+  });
+
+  const j = await res.json();
+  alert(j.correct ? "Correct!" : "Wrong!");
+
+  // Mark as seen always
+  seen.add(currentProblem.problem_id);
+
+  loadUser();
+  getRecommendation();
+  loadLeaderboard();
+}
+
+// ===============================
+// SKIP PROBLEM
+// ===============================
+function skipProblem() {
+  seen.add(currentProblem.problem_id);
+  getRecommendation();
+}
+
+// ===============================
+// LEADERBOARD
+// ===============================
+async function loadLeaderboard() {
+  const res = await fetch("/api/leaderboard");
+  const j = await res.json();
+
+  document.getElementById("leaderboard").innerHTML =
+    j.leaderboard.map(x =>
+      `<div>${x.username} — XP: ${x.xp}, Lv ${x.level}</div>`
+    ).join("");
+}
+
+// ===============================
+// AUTO LOGIN
+// ===============================
+window.onload = () => {
+  const saved = localStorage.getItem("dsa_user");
+  if (saved) {
+    currentUser = saved;
+    document.getElementById("logoutBtn").style.display = "inline-block";
+    document.getElementById("problemCard").style.display = "block";
+    document.getElementById("leaderboardCard").style.display = "block";
+    loadUser();
+    getRecommendation();
+    loadLeaderboard();
+  }
+};
+
+</script>
+</body>
+</html>
