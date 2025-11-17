@@ -241,5 +241,131 @@
     "correct": false,
     "predicted_prob": 0.499,
     "time_taken": 6
+  },
+  {
+    "timestamp": 1763389325,
+    "user_id": "317394",
+    "problem_id": 13,
+    "selected": 1,
+    "correct": false,
+    "predicted_prob": 0.499,
+    "time_taken": 7
+  },
+  {
+    "timestamp": 1763389331,
+    "user_id": "317394",
+    "problem_id": 40,
+    "selected": 1,
+    "correct": false,
+    "predicted_prob": 0.5,
+    "time_taken": 4
+  },
+  {
+    "timestamp": 1763389336,
+    "user_id": "317394",
+    "problem_id": 28,
+    "selected": 1,
+    "correct": false,
+    "predicted_prob": 0.5,
+    "time_taken": 3
+  },
+  {
+    "timestamp": 1763389344,
+    "user_id": "317394",
+    "problem_id": 9,
+    "selected": 3,
+    "correct": false,
+    "predicted_prob": 0.475,
+    "time_taken": 6
+  },
+  {
+    "timestamp": 1763389348,
+    "user_id": "317394",
+    "problem_id": 3,
+    "selected": 1,
+    "correct": false,
+    "predicted_prob": 0.504,
+    "time_taken": 2
+  },
+  {
+    "timestamp": 1763389554,
+    "user_id": "537978",
+    "problem_id": 21,
+    "selected": 0,
+    "correct": true,
+    "predicted_prob": 0.525,
+    "time_taken": 16
+  },
+  {
+    "timestamp": 1763389559,
+    "user_id": "537978",
+    "problem_id": 54,
+    "selected": 2,
+    "correct": false,
+    "predicted_prob": 0.496,
+    "time_taken": 3
+  },
+  {
+    "timestamp": 1763389841,
+    "user_id": "828698",
+    "problem_id": 22,
+    "selected": 0,
+    "correct": true,
+    "predicted_prob": 0.475,
+    "time_taken": 12
+  },
+  {
+    "timestamp": 1763390689,
+    "user_id": "683757",
+    "problem_id": 22,
+    "selected": 3,
+    "correct": false,
+    "predicted_prob": 0.501,
+    "time_taken": 5
+  },
+  {
+    "timestamp": 1763390691,
+    "user_id": "683757",
+    "problem_id": 50,
+    "selected": 0,
+    "correct": true,
+    "predicted_prob": 0.5,
+    "time_taken": 0
+  },
+  {
+    "timestamp": 1763390695,
+    "user_id": "683757",
+    "problem_id": 48,
+    "selected": 2,
+    "correct": false,
+    "predicted_prob": 0.525,
+    "time_taken": 2
+  },
+  {
+    "timestamp": 1763390699,
+    "user_id": "683757",
+    "problem_id": 68,
+    "selected": 1,
+    "correct": false,
+    "predicted_prob": 0.496,
+    "time_taken": 3
+  },
+  {
+    "timestamp": 1763390704,
+    "user_id": "683757",
+    "problem_id": 1,
+    "selected": 3,
+    "correct": false,
+    "predicted_prob": 0.522,
+    "time_taken": 3
+  },
+  {
+    "timestamp": 1763390708,
+    "user_id": "683757",
+    "problem_id": 11,
+    "selected": 1,
+    "correct": false,
+    "predicted_prob": 0.518,
+    "time_taken": 3
   }
 ]

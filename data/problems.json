@@ -23,7 +23,7 @@
       "O(1)"
     ],
     "answer": 0,
-    "difficulty": -0.7
+    "difficulty": -0.5956627150060988
   },
   {
     "id": 2,
@@ -49,7 +49,7 @@
       "O(1)"
     ],
     "answer": 0,
-    "difficulty": -1.2
+    "difficulty": -1.0992276191877102
   },
   {
     "id": 4,
@@ -127,7 +127,7 @@
       "4"
     ],
     "answer": 1,
-    "difficulty": -0.8
+    "difficulty": -0.7049688335579367
   },
   {
     "id": 10,
@@ -153,7 +153,7 @@
       "O(n^2)"
     ],
     "answer": 0,
-    "difficulty": -1.0
+    "difficulty": -0.8963122579814707
   },
   {
     "id": 12,
@@ -179,7 +179,7 @@
       "O(log n)"
     ],
     "answer": 0,
-    "difficulty": 0.004995837495787997
+    "difficulty": 0.10474604614053094
   },
   {
     "id": 14,
@@ -283,7 +283,7 @@
       "Weighted Graphs Only"
     ],
     "answer": 0,
-    "difficulty": -0.1
+    "difficulty": -0.19500416250421201
   },
   {
     "id": 22,
@@ -296,7 +296,7 @@
       "Sorting"
     ],
     "answer": 0,
-    "difficulty": 0.1
+    "difficulty": 0.09525395385946908
   },
   {
     "id": 23,
@@ -374,7 +374,7 @@
       "O(n^2)"
     ],
     "answer": 0,
-    "difficulty": -0.6
+    "difficulty": -0.4999681516030185
   },
   {
     "id": 29,
@@ -530,7 +530,7 @@
       "DFS"
     ],
     "answer": 0,
-    "difficulty": -0.3
+    "difficulty": -0.19996253129846486
   },
   {
     "id": 41,
@@ -634,7 +634,7 @@
       "O(log n) passes"
     ],
     "answer": 0,
-    "difficulty": -0.1
+    "difficulty": 0.004964068081803788
   },
   {
     "id": 49,
@@ -660,7 +660,7 @@
       "O(1)"
     ],
     "answer": 0,
-    "difficulty": -0.3
+    "difficulty": -0.40003746870153517
   },
   {
     "id": 51,
@@ -712,7 +712,7 @@
       "DFS"
     ],
     "answer": 0,
-    "difficulty": 0.3
+    "difficulty": 0.3992506384027248
   },
   {
     "id": 55,
@@ -894,7 +894,7 @@
       "Sorting"
     ],
     "answer": 0,
-    "difficulty": -0.3
+    "difficulty": -0.20077644300678651
   },
   {
     "id": 69,
