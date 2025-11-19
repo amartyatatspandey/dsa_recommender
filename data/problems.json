@@ -10,7 +10,7 @@
       "Big-Omega-O"
     ],
     "answer": 1,
-    "difficulty": 0.0
+    "difficulty": -0.1
   },
   {
     "id": 2,
@@ -23,7 +23,7 @@
       "O(1)"
     ],
     "answer": 0,
-    "difficulty": 0.0
+    "difficulty": -0.0851114966376682
   },
   {
     "id": 3,
@@ -36,7 +36,7 @@
       "Graphs"
     ],
     "answer": 1,
-    "difficulty": 0.0
+    "difficulty": -0.07292553088859906
   },
   {
     "id": 4,
@@ -49,7 +49,7 @@
       "O(log n)"
     ],
     "answer": 1,
-    "difficulty": 0.0
+    "difficulty": -0.063118093649365
   },
   {
     "id": 5,
@@ -62,7 +62,7 @@
       "O(1)"
     ],
     "answer": 0,
-    "difficulty": 0.0
+    "difficulty": -0.055236981621229767
   },
   {
     "id": 6,
@@ -75,7 +75,7 @@
       "Latest start"
     ],
     "answer": 2,
-    "difficulty": 0.0
+    "difficulty": -0.04886262846108234
   },
   {
     "id": 7,
@@ -88,7 +88,7 @@
       "Tree"
     ],
     "answer": 1,
-    "difficulty": 0.0
+    "difficulty": -0.04365442282019969
   },
   {
     "id": 8,
@@ -101,7 +101,7 @@
       "Source is wrong"
     ],
     "answer": 2,
-    "difficulty": 0.0
+    "difficulty": -0.03935014692833499
   },
   {
     "id": 9,
@@ -114,7 +114,7 @@
       "Topological order"
     ],
     "answer": 2,
-    "difficulty": 0.0
+    "difficulty": -0.03575180522206889
   },
   {
     "id": 10,
@@ -127,7 +127,7 @@
       "Topological order"
     ],
     "answer": 2,
-    "difficulty": 0.0
+    "difficulty": -0.03011330733026776
   },
   {
     "id": 11,
@@ -140,7 +140,7 @@
       "Brute force"
     ],
     "answer": 1,
-    "difficulty": 0.0
+    "difficulty": -0.03271040146229751
   },
   {
     "id": 12,
@@ -153,7 +153,7 @@
       "Choosing random edge"
     ],
     "answer": 1,
-    "difficulty": 0.0
+    "difficulty": -0.02787467091280238
   },
   {
     "id": 13,
@@ -166,7 +166,7 @@
       "Choosing random edge"
     ],
     "answer": 1,
-    "difficulty": 0.0
+    "difficulty": -0.024222998655333706
   },
   {
     "id": 14,
@@ -179,7 +179,7 @@
       "Topological order"
     ],
     "answer": 2,
-    "difficulty": 0.0
+    "difficulty": -0.025928385511265084
   },
   {
     "id": 15,

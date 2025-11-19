@@ -405,16 +405,23 @@ class SimpleEloRecommender:
         return sigmoid(skill - diff)
 
     def recommend(self, user_id, exclude_ids, last_topic):
+        """
+        FINAL RULES:
+        --------------------------------------------------------
+        1. DO NOT repeat *any* problem until ALL are attempted.
+        2. After all attempted, allow repetition again.
+        3. Avoid same topic consecutively.
+        4. Prefer highest information gain (ELO theory).
+        --------------------------------------------------------
+        """
 
         uid = str(user_id)
         if uid not in self.users:
             return []
 
+        # Build candidate list
         candidates = []
         for pid, p in self.problems.items():
-            if pid in exclude_ids:
-                continue
-
             topic = extract_topic(p["title"])
             prob = self.predict_prob(user_id, pid)
             info = prob * (1 - prob)
@@ -423,18 +430,84 @@ class SimpleEloRecommender:
                 "pid": pid,
                 "prob": prob,
                 "info": info,
-                "topic": topic,
+                "topic": topic
             })
 
+        # Sort by info gain
         candidates.sort(key=lambda x: x["info"], reverse=True)
 
+        # -----------------------------
+        # 1. USER STILL HAS UNSEEN QUESTIONS
+        # -----------------------------
+        unseen = [c for c in candidates if c["pid"] not in exclude_ids]
+
+        if unseen:
+            # Avoid same topic back-to-back
+            filtered = [c for c in unseen if c["topic"] != last_topic]
+
+            # If filter removes all, fallback to unseen-only
+            if not filtered:
+                filtered = unseen
+
+            return filtered[0] if filtered else None
+
+        # -----------------------------
+        # 2. USER HAS ATTEMPTED ALL QUESTIONS → allow repeats
+        # -----------------------------
         filtered = [c for c in candidates if c["topic"] != last_topic]
 
         if not filtered:
             filtered = candidates
 
-        best = filtered[0] if filtered else None
-        return best
+        return filtered[0] if filtered else None
+
+
+    # ========== UPDATE MODEL (skill update) ==========
+    def update(self, user_id, problem_id, correct, time_taken=None):
+        uid = str(user_id)
+        user = self.users.get(uid)
+
+        if user is None:
+            user = {
+                "username": uid,
+                "skill": 0.0,
+                "xp": 0,
+                "level": 1,
+                "streak": 0,
+                "badges": []
+            }
+
+        prev_prob = self.predict_prob(user_id, problem_id)
+        error = (1 if correct else 0) - prev_prob
+
+        lr_user = 0.6
+        lr_item = 0.2
+
+        user["skill"] += lr_user * error
+        user["skill"] = max(-4, min(4, user["skill"]))
+
+        prob = self.problems[problem_id]
+        prob["difficulty"] -= lr_item * error
+
+        xp_gain = 10 if correct else 2
+        if correct and time_taken:
+            if time_taken < 20: xp_gain += 5
+            elif time_taken < 60: xp_gain += 2
+        user["xp"] = user.get("xp", 0) + xp_gain
+
+        user["streak"] = user.get("streak", 0) + 1 if correct else 0
+
+        user["level"] = 1 + int(math.sqrt(user["xp"] // 50))
+
+        badges = set(user.get("badges", []))
+        if user["streak"] >= 3: badges.add("3-Streak")
+        if user["streak"] >= 7: badges.add("7-Streak")
+        if user["level"] >= 5: badges.add("Rising Star")
+        if user["xp"] >= 100: badges.add("Committed Learner")
+        user["badges"] = list(badges)
+
+        self.users[uid] = user
+        return prev_prob, user
 
     # ========== UPDATE MODEL ==========
     def update(self, user_id, problem_id, correct, time_taken=None):

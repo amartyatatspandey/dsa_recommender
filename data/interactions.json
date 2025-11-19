@@ -367,5 +367,131 @@
     "correct": false,
     "predicted_prob": 0.518,
     "time_taken": 3
+  },
+  {
+    "timestamp": 1763552509,
+    "user_id": "506020",
+    "problem_id": 1,
+    "selected": 1,
+    "correct": true,
+    "predicted_prob": 0.5,
+    "time_taken": 3
+  },
+  {
+    "timestamp": 1763552527,
+    "user_id": "506020",
+    "problem_id": 2,
+    "selected": 0,
+    "correct": true,
+    "predicted_prob": 0.574,
+    "time_taken": 17
+  },
+  {
+    "timestamp": 1763552539,
+    "user_id": "506020",
+    "problem_id": 3,
+    "selected": 1,
+    "correct": true,
+    "predicted_prob": 0.635,
+    "time_taken": 9
+  },
+  {
+    "timestamp": 1763552552,
+    "user_id": "506020",
+    "problem_id": 4,
+    "selected": 1,
+    "correct": true,
+    "predicted_prob": 0.684,
+    "time_taken": 11
+  },
+  {
+    "timestamp": 1763552556,
+    "user_id": "506020",
+    "problem_id": 5,
+    "selected": 0,
+    "correct": true,
+    "predicted_prob": 0.724,
+    "time_taken": 2
+  },
+  {
+    "timestamp": 1763552564,
+    "user_id": "506020",
+    "problem_id": 6,
+    "selected": 2,
+    "correct": true,
+    "predicted_prob": 0.756,
+    "time_taken": 6
+  },
+  {
+    "timestamp": 1763552572,
+    "user_id": "506020",
+    "problem_id": 7,
+    "selected": 1,
+    "correct": true,
+    "predicted_prob": 0.782,
+    "time_taken": 5
+  },
+  {
+    "timestamp": 1763552575,
+    "user_id": "506020",
+    "problem_id": 8,
+    "selected": 2,
+    "correct": true,
+    "predicted_prob": 0.803,
+    "time_taken": 2
+  },
+  {
+    "timestamp": 1763552580,
+    "user_id": "506020",
+    "problem_id": 9,
+    "selected": 2,
+    "correct": true,
+    "predicted_prob": 0.821,
+    "time_taken": 3
+  },
+  {
+    "timestamp": 1763552590,
+    "user_id": "506020",
+    "problem_id": 11,
+    "selected": 1,
+    "correct": true,
+    "predicted_prob": 0.836,
+    "time_taken": 8
+  },
+  {
+    "timestamp": 1763552596,
+    "user_id": "506020",
+    "problem_id": 10,
+    "selected": 2,
+    "correct": true,
+    "predicted_prob": 0.849,
+    "time_taken": 5
+  },
+  {
+    "timestamp": 1763552600,
+    "user_id": "506020",
+    "problem_id": 12,
+    "selected": 1,
+    "correct": true,
+    "predicted_prob": 0.861,
+    "time_taken": 2
+  },
+  {
+    "timestamp": 1763552611,
+    "user_id": "506020",
+    "problem_id": 14,
+    "selected": 2,
+    "correct": true,
+    "predicted_prob": 0.87,
+    "time_taken": 9
+  },
+  {
+    "timestamp": 1763552614,
+    "user_id": "506020",
+    "problem_id": 13,
+    "selected": 1,
+    "correct": true,
+    "predicted_prob": 0.879,
+    "time_taken": 1
   }
 ]

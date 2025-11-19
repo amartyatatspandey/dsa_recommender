@@ -138,5 +138,17 @@
     "level": 1,
     "streak": 0,
     "badges": []
+  },
+  "506020": {
+    "username": "Guneet Paaji",
+    "skill": 2.054582610301543,
+    "xp": 210,
+    "level": 3,
+    "streak": 14,
+    "badges": [
+      "7-Streak",
+      "3-Streak",
+      "Committed Learner"
+    ]
   }
 }
