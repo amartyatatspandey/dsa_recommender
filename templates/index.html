@@ -1,64 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <title>SORTIFY — Sorting Your DSA Prep</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sortify</title>
 
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
       font-family: "Inter", sans-serif;
-    }
-
-    body {
       background: #000;
-      color: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
       min-height: 100vh;
-      overflow-x: hidden;
-      padding: 40px 20px;
-      position: relative;
-    }
-
-    /* Sorting background canvas */
-    #sortCanvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.10;
-      z-index: 0;
+      padding: 30px 14px;
     }
 
     .container {
-      max-width: 800px;
-      margin: auto;
-      position: relative;
-      z-index: 2;
-    }
-
-    /* HEADER */
-    .header {
+      width: 100%;
+      max-width: 900px;
       text-align: center;
-      margin-bottom: 40px;
-      animation: fadeIn 0.8s ease-out;
     }
 
-    .header h1 {
-      font-size: 3em;
+    h1 {
+      font-size: 2.4em;
+      margin-bottom: 18px;
       font-weight: 800;
       color: #fff;
-      letter-spacing: -1px;
     }
 
-    .tagline {
+    input {
+      padding: 14px;
+      width: 80%;
+      max-width: 420px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      margin-bottom: 14px;
       font-size: 1.1em;
-      color: #cfcfcf;
     }
 
-    /* CARD */
+    button {
+      padding: 14px 24px;
+      border: none;
+      border-radius: 10px;
+      background: #fff;
+      color: #000;
+      font-size: 1.1em;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      opacity: 0.9;
+      transform: scale(1.03);
+    }
+
     .card {
       background: #fff;
       color: #111;
@@ -67,358 +69,233 @@
       margin-bottom: 28px;
       border: 1px solid #ddd;
       animation: slideUp 0.6s ease;
-    }
-
-    /* LOGIN INPUT */
-    #username {
       width: 100%;
-      padding: 14px;
-      font-size: 1em;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      margin-bottom: 14px;
-      color: #111;
-      background: #fafafa;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: visible;
     }
 
-    #username:focus {
-      outline: none;
-      border-color: #000;
-      box-shadow: 0 0 4px rgba(0,0,0,0.4);
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    /* Buttons */
-    button {
-      padding: 12px 24px;
-      border-radius: 10px;
-      border: none;
-      cursor: pointer;
-      font-weight: 600;
-      background: #000;
-      color: #fff;
-      transition: 0.25s;
-      width: 100%;
-      margin-bottom: 10px;
-    }
-
-    button:hover {
-      opacity: 0.85;
-      transform: translateY(-2px);
-    }
-
-    #logoutBtn {
-      background: #333;
-    }
-
-    /* ==========================================
-       PROBLEM STATEMENT
-       ========================================== */
+    /* UPDATED TEXT RULES FOR LONG QUESTIONS */
     #problemArea h3 {
-      font-size: 1.4em;
+      font-size: 1.6em;
       font-weight: 700;
-      margin-bottom: 12px;
       color: #000;
+      margin-bottom: 14px;
+      line-height: 1.3;
+      word-wrap: break-word;
+      overflow-wrap: anywhere;
     }
 
     #problemArea p {
-      color: #444;
-      font-size: 1.05em;
-      line-height: 1.7;
-      margin-bottom: 20px;
+      color: #333;
+      font-size: 1.15em;
+      line-height: 1.8;
+      margin-bottom: 25px;
+      word-wrap: break-word;
+      white-space: normal;
+      overflow-wrap: anywhere;
+      max-width: 100%;
     }
 
-    /* 2×2 Options */
+    /* UPDATED GRID FOR CHOICES */
     #choicesArea {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
       margin-top: 20px;
+      margin-bottom: 25px;
+    }
+
+    .choiceBtn {
+      width: 100%;
+      padding: 18px;
+      background: #111;
+      border-radius: 14px;
+      border: 2px solid #333;
+      cursor: pointer;
+      font-size: 1.1em;
+      transition: 0.2s;
+      color: #fff;
+    }
+
+    .choiceBtn:hover {
+      background: #222;
+      transform: scale(1.03);
+    }
+
+    .choice-selected {
+      background: #0f0;
+      color: #111;
+      border-color: #0f0;
+      transform: scale(1.05);
+    }
+
+    #status {
+      font-size: 1.3em;
+      font-weight: 700;
       margin-bottom: 20px;
     }
 
-    .choice-btn {
-      padding: 16px;
-      border-radius: 40px;
-      text-align: center;
-      background: #f5f5f5;
-      border: 1px solid #ccc;
-      color: #111;
-      cursor: pointer;
-      font-size: 1em;
-      font-weight: 500;
-      transition: 0.25s;
+    #leaderboard ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
     }
 
-    .choice-btn:hover {
-      background: #e5e5e5;
-      transform: translateY(-2px);
-    }
-
-    .choice-btn.selected {
-      background: #16a34a !important;
-      color: #fff !important;
-      border-color: #16a34a !important;
-      box-shadow: 0 0 12px rgba(34,197,94,0.7);
-    }
-
-    .skip-btn {
+    #leaderboard li {
       background: #fff;
-      border: 1px solid #aaa;
-      color: #111;
-      margin-top: 20px;
-    }
-
-    .skip-btn:hover {
-      background: #eee;
-    }
-
-    /* Leaderboard */
-    #leaderboard > div {
-      background: #f8f8f8;
-      padding: 16px;
-      border-radius: 10px;
-      border: 1px solid #ddd;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .lb-entry {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .lb-rank {
-      font-size: 1.5em;
-      width: 55px;
-      text-align: center;
-    }
-
-    .lb-name {
-      flex: 1;
-      padding-left: 10px;
-      font-weight: 600;
       color: #000;
+      padding: 14px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      font-weight: 600;
     }
-
-    .lb-stats {
-      color: #555;
-      font-size: 0.95em;
-    }
-
-    /* Animations */
-    @keyframes fadeIn { from{ opacity:0 } to{ opacity:1 } }
-    @keyframes slideUp { from{ opacity:0; transform: translateY(20px) } to{ opacity:1; transform: translateY(0) } }
-
   </style>
 </head>
 
 <body>
-
-<canvas id="sortCanvas"></canvas>
-
-<div class="container">
-
-  <div class="header">
+  <div class="container">
     <h1>SORTIFY</h1>
-    <div class="tagline">Sorting Your DSA Prep</div>
-  </div>
 
-  <!-- LOGIN CARD -->
-  <div class="card">
-    <input id="username" placeholder="Enter username"/>
-    <button onclick="createUser()">Start</button>
-    <button id="logoutBtn" onclick="logout()" style="display:none;">Logout</button>
-    <div id="userInfo" class="small"></div>
-  </div>
+    <div id="startScreen">
+      <input type="text" id="usernameInput" placeholder="Enter username..." />
+      <br />
+      <button onclick="start()">Start</button>
+    </div>
 
-  <!-- PROBLEM CARD -->
-  <div class="card" id="problemCard" style="display:none;">
-    <h3>Your Next Problem</h3>
-    <div id="problemArea"></div>
-    <div id="choicesArea"></div>
-    <div id="timer" class="small"></div>
-    <button class="skip-btn" onclick="skipProblem()">Skip</button>
-  </div>
+    <div id="quizScreen" style="display:none;">
+      <div id="status"></div>
 
-  <!-- LEADERBOARD -->
-  <div class="card" id="leaderboardCard" style="display:none;">
-    <h3>Leaderboard</h3>
-    <div id="leaderboard"></div>
-  </div>
-
-</div>
-
-<script>
-
-/* SORTIFY Sorting Animation Background */
-const canvas = document.getElementById("sortCanvas");
-const ctx = canvas.getContext("2d");
-let bars=[], barCount=40, sorted=false, i=0, j=0;
-
-function resizeCanvas(){canvas.width=innerWidth;canvas.height=innerHeight;}
-resizeCanvas(); onresize=resizeCanvas;
-
-function initBars(){bars=[];for(let i=0;i<barCount;i++) bars.push(Math.random()*canvas.height*0.6+20);}
-initBars();
-
-function drawBars(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  const w = canvas.width/barCount;
-  for(let k=0;k<bars.length;k++){
-    let h = bars[k];
-    ctx.fillStyle="rgba(255,255,255,0.5)";
-    ctx.fillRect(k*w+2, canvas.height-h, w-4, h);
-  }
-}
-
-function bubbleStep(){
-  if(i<bars.length){
-    if(j<bars.length-i-1){
-      if(bars[j]>bars[j+1]) [bars[j],bars[j+1]]=[bars[j+1],bars[j]];
-      j++;
-    } else { j=0; i++; }
-  } else { sorted=true; }
-}
-
-function animate(){
-  drawBars();
-  if(!sorted){ bubbleStep(); }
-  else { sorted=false; i=0;j=0; initBars(); }
-  requestAnimationFrame(animate);
-}
-animate();
-
-
-/* ==============================================
-   MAIN SORTIFY LOGIC
-   ============================================== */
-let currentUser=null, currentProblem=null, problemStart=null;
-let seen=new Set(), lastTopic=null;
-
-async function createUser(){
-  const name=document.getElementById("username").value||"guest";
-  const res=await fetch("/api/create_user",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({username:name})});
-  const j=await res.json();
-  currentUser=j.user_id;
-  localStorage.setItem("dsa_user",currentUser);
-
-  document.getElementById("logoutBtn").style.display="inline-block";
-  document.getElementById("problemCard").style.display="block";
-  document.getElementById("leaderboardCard").style.display="block";
-
-  loadUser(); getRecommendation(); loadLeaderboard();
-}
-
-function logout(){localStorage.removeItem("dsa_user");location.reload();}
-
-async function loadUser(){
-  const res=await fetch("/api/get_user/"+currentUser);
-  const j=await res.json();
-  document.getElementById("userInfo").innerHTML=`User: ${j.user.username}<br>XP: ${j.user.xp} | Level: ${j.user.level} | Streak: ${j.user.streak}`;
-}
-
-async function getRecommendation(){
-  const seenList=Array.from(seen).join(",");
-  const url=`/api/recommend/${currentUser}?seen=${encodeURIComponent(seenList)}&last_topic=${encodeURIComponent(lastTopic||"")}`;
-  const res=await fetch(url); const j=await res.json();
-  
-  if(!j.recs||j.recs.length===0){
-    document.getElementById("problemArea").innerHTML="<p>No more problems.</p>";
-    return;
-  }
-
-  const r=j.recs[0];
-  currentProblem=r; showProblem(r);
-}
-
-function showProblem(p){
-  document.getElementById("problemArea").innerHTML=`<h3>${p.title}</h3><p>${p.prompt}</p>`;
-  const area=document.getElementById("choicesArea"); area.innerHTML="";
-
-  p.choices.forEach((choice,idx)=>{
-    let btn=document.createElement("div");
-    btn.className="choice-btn";
-    btn.innerText=choice;
-
-    btn.onclick=()=>{
-      document.querySelectorAll(".choice-btn").forEach(b=>b.classList.remove("selected"));
-      btn.classList.add("selected");
-      submitAnswer(idx);
-    };
-
-    area.appendChild(btn);
-  });
-
-  lastTopic=p.topic;
-  problemStart=Date.now();
-  startTimer();
-}
-
-function startTimer(){
-  let el=document.getElementById("timer");
-  clearInterval(window._t);
-  window._t=setInterval(()=>{
-    const t=Math.floor((Date.now()-problemStart)/1000);
-    el.innerText="⏱ " + t + " sec";
-  },500);
-}
-
-async function submitAnswer(idx){
-  clearInterval(window._t);
-  const timeTaken=Math.floor((Date.now()-problemStart)/1000);
-
-  const res=await fetch("/api/submit",{
-    method:"POST",headers:{"Content-Type":"application/json"},
-    body:JSON.stringify({
-      user_id:currentUser,
-      problem_id:currentProblem.problem_id,
-      selected_index:idx,
-      time_taken:timeTaken
-    })
-  });
-  const j=await res.json();
-  alert(j.correct?"Correct!":"Wrong!");
-
-  seen.add(currentProblem.problem_id);
-  loadUser(); getRecommendation(); loadLeaderboard();
-}
-
-function skipProblem(){ seen.add(currentProblem.problem_id); getRecommendation(); }
-
-/* Leaderboard with Medals */
-async function loadLeaderboard() {
-  const res = await fetch("/api/leaderboard");
-  const j = await res.json();
-
-  const medals = ["🥇", "🥈", "🥉"];
-
-  document.getElementById("leaderboard").innerHTML = 
-    j.leaderboard.map((x, idx) => {
-      let rank = idx + 1;
-      let icon = rank <= 3 ? medals[idx] : `#${rank}`;
-
-      return `
-        <div class="lb-entry">
-          <span class="lb-rank">${icon}</span>
-          <span class="lb-name">${x.username}</span>
-          <span class="lb-stats">XP: ${x.xp} | Lv ${x.level}</span>
+      <div class="card">
+        <div id="problemArea">
+          <h3 id="problemTitle"></h3>
+          <p id="problemPrompt"></p>
         </div>
-      `;
-    }).join("");
-}
 
-window.onload=()=>{
-  const saved=localStorage.getItem("dsa_user");
-  if(saved){
-    currentUser=saved;
-    document.getElementById("logoutBtn").style.display="inline-block";
-    document.getElementById("problemCard").style.display="block";
-    document.getElementById("leaderboardCard").style.display="block";
-    loadUser(); getRecommendation(); loadLeaderboard();
-  }
-};
+        <div id="choicesArea"></div>
 
-</script>
+        <button onclick="submitAnswer()">Submit</button>
+      </div>
+
+      <button onclick="loadLeaderboard()">Leaderboard</button>
+
+      <div class="card" id="leaderboard" style="display:none;">
+        <h3>Leaderboard</h3>
+        <ul id="leaderboardList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let userId = null;
+    let currentProblemId = null;
+    let selectedChoice = null;
+    let seen = [];
+    let lastTopic = "";
+
+    async function start() {
+      const username = document.getElementById("usernameInput").value;
+
+      const res = await fetch("/api/create_user", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username }),
+      });
+
+      const data = await res.json();
+      userId = data.user_id;
+
+      document.getElementById("startScreen").style.display = "none";
+      document.getElementById("quizScreen").style.display = "block";
+
+      loadQuestion();
+    }
+
+    async function loadQuestion() {
+      const url = `/api/recommend/${userId}?seen=${seen.join(",")}&last_topic=${lastTopic}`;
+      const res = await fetch(url);
+      const data = await res.json();
+
+      if (!data.recs || data.recs.length === 0) {
+        document.getElementById("problemTitle").innerText = "No more questions!";
+        return;
+      }
+
+      const q = data.recs[0];
+      currentProblemId = q.problem_id;
+      lastTopic = q.topic;
+
+      document.getElementById("problemTitle").innerText = q.title;
+      document.getElementById("problemPrompt").innerText = q.prompt;
+
+      const choicesArea = document.getElementById("choicesArea");
+      choicesArea.innerHTML = "";
+
+      selectedChoice = null;
+
+      q.choices.forEach((c, idx) => {
+        const btn = document.createElement("button");
+        btn.classList.add("choiceBtn");
+        btn.innerText = c;
+        btn.onclick = () => {
+          document.querySelectorAll(".choiceBtn").forEach(b => b.classList.remove("choice-selected"));
+          btn.classList.add("choice-selected");
+          selectedChoice = idx;
+        };
+        choicesArea.appendChild(btn);
+      });
+
+      seen.push(currentProblemId);
+    }
+
+    async function submitAnswer() {
+      if (selectedChoice === null) return;
+
+      const res = await fetch("/api/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          user_id: userId,
+          problem_id: currentProblemId,
+          selected_index: selectedChoice,
+          time_taken: 30
+        }),
+      });
+
+      const data = await res.json();
+
+      document.getElementById("status").innerText =
+        data.correct ? "Correct!" : "Incorrect!";
+
+      setTimeout(loadQuestion, 600);
+    }
+
+    async function loadLeaderboard() {
+      const res = await fetch("/api/leaderboard");
+      const data = await res.json();
+
+      const list = document.getElementById("leaderboardList");
+      list.innerHTML = "";
+      data.leaderboard.forEach((u, idx) => {
+        const li = document.createElement("li");
+        li.innerText = `${idx + 1}. ${u.username} - XP: ${u.xp}`;
+        list.appendChild(li);
+      });
+
+      document.getElementById("leaderboard").style.display = "block";
+    }
+  </script>
 </body>
 </html>
