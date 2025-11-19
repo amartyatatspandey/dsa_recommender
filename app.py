@@ -740,6 +740,9 @@ import math
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 from supabase import create_client, Client
+from dotenv import load_dotenv
+load_dotenv()
+
 
 # ----------------------------------------------------------
 # SUPABASE SETUP
