@@ -1,1276 +1,1302 @@
 [
   {
-    "id": 0,
-    "title": "Array - Maximum Subarray Sum",
-    "prompt": "Which algorithm is commonly used to find the maximum subarray sum in O(n)?",
-    "choices": [
-      "Kadane\u2019s Algorithm",
-      "Merge Sort",
-      "Binary Search",
-      "Dijkstra\u2019s Algorithm"
-    ],
-    "answer": 0,
-    "difficulty": -1.0
-  },
-  {
     "id": 1,
-    "title": "Array - Next Permutation",
-    "prompt": "What is the optimal time complexity to compute the next lexicographical permutation of an array?",
+    "title": "Asymptotic Notation",
+    "prompt": "Which notation gives the tight bound?",
     "choices": [
-      "O(n)",
-      "O(n log n)",
-      "O(n^2)",
-      "O(1)"
+      "Big O",
+      "Big Theta",
+      "Big Omega",
+      "Big-Omega-O"
     ],
-    "answer": 0,
-    "difficulty": -0.5956627150060988
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 2,
-    "title": "String - Longest Palindromic Substring",
-    "prompt": "What is the time complexity of Manacher\u2019s algorithm for longest palindromic substring?",
+    "title": "Time Complexity",
+    "prompt": "What is time complexity of scanning an array?",
     "choices": [
       "O(n)",
+      "O(log n)",
       "O(n log n)",
-      "O(n^2)",
-      "O(log n)"
+      "O(1)"
     ],
     "answer": 0,
-    "difficulty": -0.2
+    "difficulty": 0.0
   },
   {
     "id": 3,
-    "title": "String - Check Anagram",
-    "prompt": "What is the optimal time complexity to check if two strings are anagrams?",
+    "title": "Binary Search",
+    "prompt": "Binary search works only on?",
     "choices": [
-      "O(n)",
-      "O(n log n)",
-      "O(n^2)",
-      "O(1)"
+      "Unsorted arrays",
+      "Sorted arrays",
+      "Linked lists",
+      "Graphs"
     ],
-    "answer": 0,
-    "difficulty": -1.0992276191877102
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 4,
-    "title": "Binary Search - First True in Boolean Array",
-    "prompt": "Binary search can find the first true value in a boolean array in which time?",
+    "title": "Merge Sort",
+    "prompt": "Merge sort complexity?",
     "choices": [
-      "O(log n)",
       "O(n)",
       "O(n log n)",
-      "O(1)"
+      "O(n^2)",
+      "O(log n)"
     ],
-    "answer": 0,
-    "difficulty": -0.5
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 5,
-    "title": "Binary Search - Search Rotated Sorted Array",
-    "prompt": "Searching an element in a rotated sorted array takes?",
+    "title": "Fibonacci DP",
+    "prompt": "Bottom-up DP Fibonacci complexity?",
     "choices": [
-      "O(log n)",
       "O(n)",
-      "O(n log n)",
+      "O(log n)",
+      "O(n^2)",
       "O(1)"
     ],
     "answer": 0,
-    "difficulty": -0.19999999999999998
+    "difficulty": 0.0
   },
   {
     "id": 6,
-    "title": "Stack - Valid Parentheses",
-    "prompt": "What data structure is best used to validate parentheses?",
+    "title": "Activity Selection",
+    "prompt": "Greedy choice for activity selection?",
     "choices": [
-      "Stack",
-      "Queue",
-      "Array",
-      "Graph"
+      "Earliest start",
+      "Shortest duration",
+      "Earliest finish",
+      "Latest start"
     ],
-    "answer": 0,
-    "difficulty": -1.1
+    "answer": 2,
+    "difficulty": 0.0
   },
   {
     "id": 7,
-    "title": "Stack - Next Greater Element",
-    "prompt": "What is the optimal time complexity for finding the next greater element for every element in an array?",
+    "title": "BFS",
+    "prompt": "BFS uses which data structure?",
     "choices": [
-      "O(n)",
-      "O(n log n)",
-      "O(n^2)",
-      "O(1)"
+      "Stack",
+      "Queue",
+      "Heap",
+      "Tree"
     ],
-    "answer": 0,
-    "difficulty": -0.7
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 8,
-    "title": "Queue - Sliding Window Maximum",
-    "prompt": "Deque can solve sliding window maximum in what time?",
+    "title": "Dijkstra",
+    "prompt": "Dijkstra fails when?",
     "choices": [
-      "O(n)",
-      "O(n log n)",
-      "O(n^2)",
-      "O(1)"
+      "Edges are positive",
+      "Graph is disconnected",
+      "Edges are negative",
+      "Source is wrong"
     ],
-    "answer": 0,
-    "difficulty": -0.2
+    "answer": 2,
+    "difficulty": 0.0
   },
   {
     "id": 9,
-    "title": "Queue - Implement Stack Using Queue",
-    "prompt": "Minimum number of queues required to implement a stack?",
+    "title": "Ford-Fulkerson",
+    "prompt": "Ford-Fulkerson computes?",
     "choices": [
-      "1",
-      "2",
-      "3",
-      "4"
+      "Shortest path",
+      "Minimum cut",
+      "Maximum flow",
+      "Topological order"
     ],
-    "answer": 1,
-    "difficulty": -0.7049688335579367
+    "answer": 2,
+    "difficulty": 0.0
   },
   {
     "id": 10,
-    "title": "Linked List - Detect Cycle",
-    "prompt": "Which algorithm detects a loop in a linked list?",
+    "title": "Ford-Fulkerson",
+    "prompt": "Ford-Fulkerson computes?",
     "choices": [
-      "Floyd Cycle Detection",
-      "DFS",
-      "Kadane\u2019s",
-      "Binary Search"
+      "Shortest path",
+      "Minimum cut",
+      "Maximum flow",
+      "Topological order"
     ],
-    "answer": 0,
-    "difficulty": -0.5
+    "answer": 2,
+    "difficulty": 0.0
   },
   {
     "id": 11,
-    "title": "Linked List - Reverse List",
-    "prompt": "Reversing a singly linked list iteratively takes?",
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
     "choices": [
-      "O(n)",
-      "O(n log n)",
-      "O(1)",
-      "O(n^2)"
+      "Greedy",
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
     ],
-    "answer": 0,
-    "difficulty": -0.8963122579814707
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 12,
-    "title": "Tree - Height of Tree",
-    "prompt": "What is the time complexity to calculate tree height using DFS?",
+    "title": "Prim\u2019s Algorithm",
+    "prompt": "Prim\u2019s algorithm grows the MST by?",
     "choices": [
-      "O(n)",
-      "O(log n)",
-      "O(n^2)",
-      "O(1)"
+      "Choosing max edge",
+      "Choosing min edge",
+      "Choosing median edge",
+      "Choosing random edge"
     ],
-    "answer": 0,
-    "difficulty": -0.4
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 13,
-    "title": "Tree - Balanced Binary Tree",
-    "prompt": "Checking if a binary tree is height-balanced takes?",
+    "title": "Prim\u2019s Algorithm",
+    "prompt": "Prim\u2019s algorithm grows the MST by?",
     "choices": [
-      "O(n)",
-      "O(n log n)",
-      "O(n^2)",
-      "O(log n)"
+      "Choosing max edge",
+      "Choosing min edge",
+      "Choosing median edge",
+      "Choosing random edge"
     ],
-    "answer": 0,
-    "difficulty": 0.10474604614053094
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 14,
-    "title": "Tree - Lowest Common Ancestor",
-    "prompt": "LCA using binary lifting takes query time:",
+    "title": "Ford-Fulkerson",
+    "prompt": "Ford-Fulkerson computes?",
     "choices": [
-      "O(1)",
-      "O(log n)",
-      "O(n)",
-      "O(n log n)"
+      "Shortest path",
+      "Minimum cut",
+      "Maximum flow",
+      "Topological order"
     ],
-    "answer": 1,
-    "difficulty": 0.6
+    "answer": 2,
+    "difficulty": 0.0
   },
   {
     "id": 15,
-    "title": "Tree - Diameter of Tree",
-    "prompt": "Diameter of a tree can be found using how many BFS/DFS traversals?",
+    "title": "Prim\u2019s Algorithm",
+    "prompt": "Prim\u2019s algorithm grows the MST by?",
     "choices": [
-      "2",
-      "1",
-      "3",
-      "Depends"
+      "Choosing max edge",
+      "Choosing min edge",
+      "Choosing median edge",
+      "Choosing random edge"
     ],
-    "answer": 0,
-    "difficulty": 0.5
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 16,
-    "title": "Graph - BFS Traversal",
-    "prompt": "Time complexity of BFS using adjacency list?",
+    "title": "Quick Sort Pivot",
+    "prompt": "What impacts QuickSort performance most?",
     "choices": [
-      "O(V + E)",
-      "O(V^2)",
-      "O(E log V)",
-      "O(1)"
+      "Pivot choice",
+      "Stack size",
+      "Variable names",
+      "OS type"
     ],
     "answer": 0,
-    "difficulty": -0.40074936159727514
+    "difficulty": 0.0
   },
   {
     "id": 17,
-    "title": "Graph - DFS Traversal",
-    "prompt": "Time complexity of DFS?",
+    "title": "Prim\u2019s Algorithm",
+    "prompt": "Prim\u2019s algorithm grows the MST by?",
     "choices": [
-      "O(V + E)",
-      "O(V^2)",
-      "O(E log V)",
-      "O(log V)"
+      "Choosing max edge",
+      "Choosing min edge",
+      "Choosing median edge",
+      "Choosing random edge"
     ],
-    "answer": 0,
-    "difficulty": -0.40129093899970736
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 18,
-    "title": "Graph - Dijkstra",
-    "prompt": "Dijkstra using a priority queue runs in?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "O((V+E) log V)",
-      "O(E)",
-      "O(V^2)",
-      "O(log V)"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": 0.8
+    "difficulty": 0.0
   },
   {
     "id": 19,
-    "title": "Graph - Bellman Ford",
-    "prompt": "Bellman-Ford algorithm runs in?",
+    "title": "Prim\u2019s Algorithm",
+    "prompt": "Prim\u2019s algorithm grows the MST by?",
     "choices": [
-      "O(VE)",
-      "O(log V)",
-      "O(E log V)",
-      "O(V)"
+      "Choosing max edge",
+      "Choosing min edge",
+      "Choosing median edge",
+      "Choosing random edge"
     ],
-    "answer": 0,
-    "difficulty": 0.9
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 20,
-    "title": "Graph - Floyd Warshall",
-    "prompt": "What is the complexity of Floyd Warshall?",
+    "title": "Prim\u2019s Algorithm",
+    "prompt": "Prim\u2019s algorithm grows the MST by?",
     "choices": [
-      "O(n^3)",
-      "O(n^2)",
-      "O(n log n)",
-      "O(n)"
+      "Choosing max edge",
+      "Choosing min edge",
+      "Choosing median edge",
+      "Choosing random edge"
     ],
-    "answer": 0,
-    "difficulty": 1.0
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 21,
-    "title": "Graph - Topological Sort",
-    "prompt": "Topological sorting works only for?",
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
     "choices": [
-      "DAG",
-      "Any Graph",
-      "Trees Only",
-      "Weighted Graphs Only"
+      "Greedy",
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
     ],
-    "answer": 0,
-    "difficulty": -0.19500416250421201
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 22,
-    "title": "Graph - Cycle Detection Undirected",
-    "prompt": "Cycle in undirected graph is detected using?",
+    "title": "Quick Sort Pivot",
+    "prompt": "What impacts QuickSort performance most?",
     "choices": [
-      "DFS + Parent Tracking",
-      "BFS Only",
-      "Binary Search",
-      "Sorting"
+      "Pivot choice",
+      "Stack size",
+      "Variable names",
+      "OS type"
     ],
     "answer": 0,
-    "difficulty": 0.09525395385946908
+    "difficulty": 0.0
   },
   {
     "id": 23,
-    "title": "Graph - Cycle Detection Directed",
-    "prompt": "Cycle in directed graph requires?",
+    "title": "Ford-Fulkerson",
+    "prompt": "Ford-Fulkerson computes?",
     "choices": [
-      "DFS with recursion stack",
-      "Only BFS",
-      "Binary Search Tree",
-      "Prefix Sum"
+      "Shortest path",
+      "Minimum cut",
+      "Maximum flow",
+      "Topological order"
     ],
-    "answer": 0,
-    "difficulty": 0.2
+    "answer": 2,
+    "difficulty": 0.0
   },
   {
     "id": 24,
-    "title": "Graph - Bipartite Graph",
-    "prompt": "Which method checks bipartiteness?",
+    "title": "Ford-Fulkerson",
+    "prompt": "Ford-Fulkerson computes?",
     "choices": [
-      "DFS/BFS Coloring",
-      "Binary Search",
-      "Kadane\u2019s",
-      "Dijkstra"
+      "Shortest path",
+      "Minimum cut",
+      "Maximum flow",
+      "Topological order"
     ],
-    "answer": 0,
-    "difficulty": 0.1
+    "answer": 2,
+    "difficulty": 0.0
   },
   {
     "id": 25,
-    "title": "Graph - Minimum Spanning Tree",
-    "prompt": "Which algorithm can compute MST?",
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
     "choices": [
-      "Kruskal/Prim",
-      "DFS",
-      "Kadane",
-      "Bellman Ford"
+      "Greedy",
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
     ],
-    "answer": 0,
-    "difficulty": 0.4
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 26,
-    "title": "Graph - Bridges in Graph",
-    "prompt": "Bridges in a graph are found using?",
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
     "choices": [
-      "Tarjan\u2019s Algorithm",
-      "Kadane\u2019s Algorithm",
-      "Binary Search",
-      "Trie"
+      "Greedy",
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
     ],
-    "answer": 0,
-    "difficulty": 0.8
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 27,
-    "title": "Graph - Articulation Points",
-    "prompt": "Articulation points are found using?",
+    "title": "Ford-Fulkerson",
+    "prompt": "Ford-Fulkerson computes?",
     "choices": [
-      "DFS + Low/Discovery Times",
-      "Heap",
-      "Queue",
-      "Binary Search"
+      "Shortest path",
+      "Minimum cut",
+      "Maximum flow",
+      "Topological order"
     ],
-    "answer": 0,
-    "difficulty": 1.0
+    "answer": 2,
+    "difficulty": 0.0
   },
   {
     "id": 28,
-    "title": "DP - Fibonacci Optimized",
-    "prompt": "Space-optimized Fibonacci DP runs in?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "O(n)",
-      "O(1)",
-      "O(n log n)",
-      "O(n^2)"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": -0.4999681516030185
+    "difficulty": 0.0
   },
   {
     "id": 29,
-    "title": "DP - 0/1 Knapsack",
-    "prompt": "What is the time complexity of 0/1 knapsack with DP?",
+    "title": "Ford-Fulkerson",
+    "prompt": "Ford-Fulkerson computes?",
     "choices": [
-      "O(nW)",
-      "O(n log n)",
-      "O(W)",
-      "O(n^2)"
+      "Shortest path",
+      "Minimum cut",
+      "Maximum flow",
+      "Topological order"
     ],
-    "answer": 0,
-    "difficulty": 0.6
+    "answer": 2,
+    "difficulty": 0.0
   },
   {
     "id": 30,
-    "title": "DP - Longest Common Subsequence",
-    "prompt": "Time complexity of LCS using DP?",
+    "title": "Quick Sort Pivot",
+    "prompt": "What impacts QuickSort performance most?",
     "choices": [
-      "O(n*m)",
-      "O(n+m)",
-      "O(n^2)",
-      "O(log n)"
+      "Pivot choice",
+      "Stack size",
+      "Variable names",
+      "OS type"
     ],
     "answer": 0,
-    "difficulty": 0.4
+    "difficulty": 0.0
   },
   {
     "id": 31,
-    "title": "DP - Edit Distance",
-    "prompt": "Edit distance DP solution runs in?",
+    "title": "Prim\u2019s Algorithm",
+    "prompt": "Prim\u2019s algorithm grows the MST by?",
     "choices": [
-      "O(nm)",
-      "O(n)",
-      "O(m)",
-      "O(log n)"
+      "Choosing max edge",
+      "Choosing min edge",
+      "Choosing median edge",
+      "Choosing random edge"
     ],
-    "answer": 0,
-    "difficulty": 0.7
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 32,
-    "title": "DP - Partition Equal Subset",
-    "prompt": "Subset-sum DP solution has complexity?",
+    "title": "Prim\u2019s Algorithm",
+    "prompt": "Prim\u2019s algorithm grows the MST by?",
     "choices": [
-      "O(n * sum)",
-      "O(n)",
-      "O(sum)",
-      "O(n log n)"
+      "Choosing max edge",
+      "Choosing min edge",
+      "Choosing median edge",
+      "Choosing random edge"
     ],
-    "answer": 0,
-    "difficulty": 0.5
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 33,
-    "title": "DP - Coin Change Ways",
-    "prompt": "Coin change (ways) DP complexity?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "O(n*amount)",
-      "O(n)",
-      "O(n^2)",
-      "O(log n)"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": 0.5
+    "difficulty": 0.0
   },
   {
     "id": 34,
-    "title": "DP - Coin Change Min Coins",
-    "prompt": "Minimum coins DP solution complexity?",
+    "title": "Quick Sort Pivot",
+    "prompt": "What impacts QuickSort performance most?",
     "choices": [
-      "O(n*amount)",
-      "O(n)",
-      "O(amount)",
-      "O(log n)"
+      "Pivot choice",
+      "Stack size",
+      "Variable names",
+      "OS type"
     ],
     "answer": 0,
-    "difficulty": 0.6
+    "difficulty": 0.0
   },
   {
     "id": 35,
-    "title": "DP - Longest Increasing Subsequence (DP)",
-    "prompt": "Classic DP solution for LIS runs in?",
+    "title": "Quick Sort Pivot",
+    "prompt": "What impacts QuickSort performance most?",
     "choices": [
-      "O(n^2)",
-      "O(n log n)",
-      "O(n)",
-      "O(log n)"
+      "Pivot choice",
+      "Stack size",
+      "Variable names",
+      "OS type"
     ],
     "answer": 0,
-    "difficulty": 0.7
+    "difficulty": 0.0
   },
   {
     "id": 36,
-    "title": "DP - Longest Increasing Subsequence (Binary Search)",
-    "prompt": "Optimized LIS using binary search runs in?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "O(n log n)",
-      "O(n)",
-      "O(n^2)",
-      "O(log n)"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": 0.4802624679775096
+    "difficulty": 0.0
   },
   {
     "id": 37,
-    "title": "DP - Matrix Chain Multiplication",
-    "prompt": "MCM DP has which time complexity?",
+    "title": "Quick Sort Pivot",
+    "prompt": "What impacts QuickSort performance most?",
     "choices": [
-      "O(n^3)",
-      "O(n^2)",
-      "O(n log n)",
-      "O(n)"
+      "Pivot choice",
+      "Stack size",
+      "Variable names",
+      "OS type"
     ],
     "answer": 0,
-    "difficulty": 1.0
+    "difficulty": 0.0
   },
   {
     "id": 38,
-    "title": "DP - Egg Dropping Puzzle",
-    "prompt": "Classic DP egg-dropping time complexity?",
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
     "choices": [
-      "O(n*k)",
-      "O(n^2)",
-      "O(k log n)",
-      "O(n)"
+      "Greedy",
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
     ],
-    "answer": 0,
-    "difficulty": 1.2
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 39,
-    "title": "DP - Rod Cutting Problem",
-    "prompt": "Rod cutting DP runs in?",
+    "title": "Prim\u2019s Algorithm",
+    "prompt": "Prim\u2019s algorithm grows the MST by?",
     "choices": [
-      "O(n^2)",
-      "O(n)",
-      "O(n log n)",
-      "O(log n)"
+      "Choosing max edge",
+      "Choosing min edge",
+      "Choosing median edge",
+      "Choosing random edge"
     ],
-    "answer": 0,
-    "difficulty": 0.9
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 40,
-    "title": "Greedy - Activity Selection",
-    "prompt": "The classic activity selection problem uses which greedy strategy?",
+    "title": "Prim\u2019s Algorithm",
+    "prompt": "Prim\u2019s algorithm grows the MST by?",
     "choices": [
-      "Sort by finish time",
-      "Sort by start time",
-      "Random choice",
-      "DFS"
+      "Choosing max edge",
+      "Choosing min edge",
+      "Choosing median edge",
+      "Choosing random edge"
     ],
-    "answer": 0,
-    "difficulty": -0.19996253129846486
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 41,
-    "title": "Greedy - Fractional Knapsack",
-    "prompt": "Fractional knapsack optimal strategy?",
+    "title": "Ford-Fulkerson",
+    "prompt": "Ford-Fulkerson computes?",
     "choices": [
-      "Sort by value/weight",
-      "Sort by weight",
-      "Sort by value",
-      "Dynamic programming"
+      "Shortest path",
+      "Minimum cut",
+      "Maximum flow",
+      "Topological order"
     ],
-    "answer": 0,
-    "difficulty": -0.2
+    "answer": 2,
+    "difficulty": 0.0
   },
   {
     "id": 42,
-    "title": "Greedy - Minimum Platforms",
-    "prompt": "Minimum platforms problem uses?",
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
     "choices": [
-      "Sorting",
-      "Heap only",
-      "Stack",
-      "Graph traversal"
+      "Greedy",
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
     ],
-    "answer": 0,
-    "difficulty": 0.2
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 43,
-    "title": "Greedy - Job Sequencing with Deadlines",
-    "prompt": "What data structure is commonly used in Job Sequencing?",
+    "title": "Ford-Fulkerson",
+    "prompt": "Ford-Fulkerson computes?",
     "choices": [
-      "Disjoint Set / Greedy",
-      "Binary tree",
-      "Trie",
-      "Stack"
+      "Shortest path",
+      "Minimum cut",
+      "Maximum flow",
+      "Topological order"
     ],
-    "answer": 0,
-    "difficulty": 0.4
+    "answer": 2,
+    "difficulty": 0.0
   },
   {
     "id": 44,
-    "title": "Greedy - Huffman Coding",
-    "prompt": "Huffman coding builds a tree using which DS?",
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
     "choices": [
-      "Min-Heap",
-      "Max-Heap",
-      "Stack",
-      "Deque"
+      "Greedy",
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
     ],
-    "answer": 0,
-    "difficulty": 0.7
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 45,
-    "title": "Greedy - Gas Station",
-    "prompt": "Gas station problem can be solved in which time?",
+    "title": "Quick Sort Pivot",
+    "prompt": "What impacts QuickSort performance most?",
     "choices": [
-      "O(n)",
-      "O(n log n)",
-      "O(n^2)",
-      "O(log n)"
+      "Pivot choice",
+      "Stack size",
+      "Variable names",
+      "OS type"
     ],
     "answer": 0,
-    "difficulty": 0.4
+    "difficulty": 0.0
   },
   {
     "id": 46,
-    "title": "Greedy - Jump Game",
-    "prompt": "Jump Game I can be solved greedily in?",
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
     "choices": [
-      "O(n)",
-      "O(n log n)",
-      "O(n^2)",
-      "O(log n)"
+      "Greedy",
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
     ],
-    "answer": 0,
-    "difficulty": 0.10414224946564232
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 47,
-    "title": "Greedy - Lemonade Change",
-    "prompt": "Lemonade change greedy uses which idea?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "Always give larger bills later",
-      "Always give maximum change",
-      "Use dynamic programming",
-      "Binary search"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": -0.5
+    "difficulty": 0.0
   },
   {
     "id": 48,
-    "title": "Greedy - Candy Distribution",
-    "prompt": "Candy distribution requires how many passes?",
+    "title": "Ford-Fulkerson",
+    "prompt": "Ford-Fulkerson computes?",
     "choices": [
-      "Two passes",
-      "One pass",
-      "Three passes",
-      "O(log n) passes"
+      "Shortest path",
+      "Minimum cut",
+      "Maximum flow",
+      "Topological order"
     ],
-    "answer": 0,
-    "difficulty": 0.004964068081803788
+    "answer": 2,
+    "difficulty": 0.0
   },
   {
     "id": 49,
-    "title": "Greedy - Partition Labels",
-    "prompt": "Partition Labels problem takes?",
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
     "choices": [
-      "O(n)",
-      "O(n log n)",
-      "O(n^2)",
-      "O(log n)"
+      "Greedy",
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
     ],
-    "answer": 0,
-    "difficulty": -0.4
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 50,
-    "title": "Binary Search - Peak Element",
-    "prompt": "Finding a peak element using binary search runs in?",
+    "title": "Quick Sort Pivot",
+    "prompt": "What impacts QuickSort performance most?",
     "choices": [
-      "O(log n)",
-      "O(n)",
-      "O(n log n)",
-      "O(1)"
+      "Pivot choice",
+      "Stack size",
+      "Variable names",
+      "OS type"
     ],
     "answer": 0,
-    "difficulty": -0.40003746870153517
+    "difficulty": 0.0
   },
   {
     "id": 51,
-    "title": "Binary Search - Search in 2D Matrix",
-    "prompt": "Searching in a sorted 2D matrix optimally takes?",
+    "title": "Prim\u2019s Algorithm",
+    "prompt": "Prim\u2019s algorithm grows the MST by?",
     "choices": [
-      "O(log n)",
-      "O(n)",
-      "O(n log n)",
-      "O(1)"
+      "Choosing max edge",
+      "Choosing min edge",
+      "Choosing median edge",
+      "Choosing random edge"
     ],
-    "answer": 0,
-    "difficulty": -0.1
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 52,
-    "title": "Binary Search - Koko Eating Bananas",
-    "prompt": "Koko eating bananas is solved using?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "Binary search on answer",
-      "DFS",
-      "Greedy only",
-      "Dijkstra"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": 0.1
+    "difficulty": 0.0
   },
   {
     "id": 53,
-    "title": "Binary Search - Aggressive Cows",
-    "prompt": "Aggressive cows problem uses?",
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
     "choices": [
-      "Binary search on distance",
-      "Sort + Stack",
-      "DP",
-      "Graph traversal"
+      "Greedy",
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
     ],
-    "answer": 0,
-    "difficulty": 0.2
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 54,
-    "title": "Binary Search - Allocate Books",
-    "prompt": "Allocate books uses which concept?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "Binary search on answer",
-      "Heap",
-      "Greedy + sorting",
-      "DFS"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": 0.3992506384027248
+    "difficulty": 0.0
   },
   {
     "id": 55,
-    "title": "Binary Search - Painter Partition",
-    "prompt": "Painter partition is solved in?",
+    "title": "Quick Sort Pivot",
+    "prompt": "What impacts QuickSort performance most?",
     "choices": [
-      "O(n log n)",
-      "O(n)",
-      "O(n^2)",
-      "O(1)"
+      "Pivot choice",
+      "Stack size",
+      "Variable names",
+      "OS type"
     ],
     "answer": 0,
-    "difficulty": 0.4
+    "difficulty": 0.0
   },
   {
     "id": 56,
-    "title": "Binary Search - Median of Two Sorted Arrays",
-    "prompt": "What is the optimal time for finding the median of two sorted arrays?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "O(log(min(n,m)))",
-      "O(n+m)",
-      "O(n)",
-      "O(log n)"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": 1.0
+    "difficulty": 0.0
   },
   {
     "id": 57,
-    "title": "Binary Search - Wood Cutting Problem",
-    "prompt": "Finding max saw height for wood cutting uses?",
+    "title": "Ford-Fulkerson",
+    "prompt": "Ford-Fulkerson computes?",
     "choices": [
-      "Binary search",
-      "Greedy",
-      "DP",
-      "DFS"
+      "Shortest path",
+      "Minimum cut",
+      "Maximum flow",
+      "Topological order"
     ],
-    "answer": 0,
-    "difficulty": 0.5
+    "answer": 2,
+    "difficulty": 0.0
   },
   {
     "id": 58,
-    "title": "Binary Search - Find Kth Missing Number",
-    "prompt": "Finding K-th missing number from sorted list takes?",
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
     "choices": [
-      "O(log n)",
-      "O(n)",
-      "O(n log n)",
-      "O(1)"
+      "Greedy",
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
     ],
-    "answer": 0,
-    "difficulty": -0.1
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 59,
-    "title": "Binary Search - Ship Packages in D Days",
-    "prompt": "Ship packages in D days uses?",
+    "title": "Ford-Fulkerson",
+    "prompt": "Ford-Fulkerson computes?",
     "choices": [
-      "Binary search on weight capacity",
-      "Greedy only",
-      "DP",
-      "Sorting"
+      "Shortest path",
+      "Minimum cut",
+      "Maximum flow",
+      "Topological order"
     ],
-    "answer": 0,
-    "difficulty": 0.4
+    "answer": 2,
+    "difficulty": 0.0
   },
   {
     "id": 60,
-    "title": "Tree - Binary Tree Right View",
-    "prompt": "Binary tree right view can be solved using?",
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
     "choices": [
-      "Level order traversal",
-      "DFS only",
-      "Binary search",
-      "Stack"
+      "Greedy",
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
     ],
-    "answer": 0,
-    "difficulty": -0.2
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 61,
-    "title": "Tree - Max Path Sum",
-    "prompt": "Binary tree maximum path sum is solved using?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "DFS + recursion",
-      "BFS",
-      "Binary search",
-      "Sorting"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": 1.1
+    "difficulty": 0.0
   },
   {
     "id": 62,
-    "title": "Tree - Zig Zag Traversal",
-    "prompt": "Zig-zag traversal uses which DS?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "Deque",
-      "Stack only",
-      "Queue only",
-      "Heap"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": -0.1
+    "difficulty": 0.0
   },
   {
     "id": 63,
-    "title": "Tree - Vertical Order Traversal",
-    "prompt": "Vertical order traversal uses?",
+    "title": "Ford-Fulkerson",
+    "prompt": "Ford-Fulkerson computes?",
     "choices": [
-      "BFS + Map",
-      "Stack",
-      "Heap",
-      "Binary search"
+      "Shortest path",
+      "Minimum cut",
+      "Maximum flow",
+      "Topological order"
     ],
-    "answer": 0,
-    "difficulty": 0.6
+    "answer": 2,
+    "difficulty": 0.0
   },
   {
     "id": 64,
-    "title": "Tree - Morris Traversal",
-    "prompt": "Morris traversal runs in?",
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
     "choices": [
-      "O(n)",
-      "O(n log n)",
-      "O(log n)",
-      "O(1)"
+      "Greedy",
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
     ],
-    "answer": 0,
-    "difficulty": 0.8
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 65,
-    "title": "Tree - Construct BT from Preorder & Inorder",
-    "prompt": "Constructing binary tree from preorder & inorder takes?",
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
     "choices": [
-      "O(n)",
-      "O(n log n)",
-      "O(n^2)",
-      "O(log n)"
+      "Greedy",
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
     ],
-    "answer": 0,
-    "difficulty": 0.7
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 66,
-    "title": "Tree - Serialize & Deserialize",
-    "prompt": "Serialize/deserialize binary tree complexity?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "O(n)",
-      "O(log n)",
-      "O(n^2)",
-      "O(1)"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": 0.8
+    "difficulty": 0.0
   },
   {
     "id": 67,
-    "title": "Tree - Boundary Traversal",
-    "prompt": "Boundary traversal requires how many passes?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "3 passes",
-      "1 pass",
-      "2 passes",
-      "4 passes"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": 0.3
+    "difficulty": 0.0
   },
   {
     "id": 68,
-    "title": "Tree - Symmetric Tree",
-    "prompt": "To check symmetry, use?",
+    "title": "Quick Sort Pivot",
+    "prompt": "What impacts QuickSort performance most?",
     "choices": [
-      "Recursive DFS",
-      "Binary search",
-      "Hashing",
-      "Sorting"
+      "Pivot choice",
+      "Stack size",
+      "Variable names",
+      "OS type"
     ],
     "answer": 0,
-    "difficulty": -0.20077644300678651
+    "difficulty": 0.0
   },
   {
     "id": 69,
-    "title": "Tree - Flatten BT to Linked List",
-    "prompt": "Flatten BT uses which technique?",
+    "title": "Ford-Fulkerson",
+    "prompt": "Ford-Fulkerson computes?",
     "choices": [
-      "Reverse postorder DFS",
-      "BFS",
-      "Stack only",
-      "Queue only"
+      "Shortest path",
+      "Minimum cut",
+      "Maximum flow",
+      "Topological order"
     ],
-    "answer": 0,
-    "difficulty": 0.5
+    "answer": 2,
+    "difficulty": 0.0
   },
   {
     "id": 70,
-    "title": "Graphs - Number of Provinces",
-    "prompt": "Number of provinces problem uses?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "DFS/BFS",
-      "Heap",
-      "Binary Search",
-      "Trie"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": -0.1
+    "difficulty": 0.0
   },
   {
     "id": 71,
-    "title": "Graphs - Surrounded Regions",
-    "prompt": "Surrounded regions is solved using?",
+    "title": "Ford-Fulkerson",
+    "prompt": "Ford-Fulkerson computes?",
     "choices": [
-      "DFS from borders",
-      "Binary search",
-      "DP",
-      "Greedy"
+      "Shortest path",
+      "Minimum cut",
+      "Maximum flow",
+      "Topological order"
     ],
-    "answer": 0,
-    "difficulty": 0.5
+    "answer": 2,
+    "difficulty": 0.0
   },
   {
     "id": 72,
-    "title": "Graphs - Rotten Oranges",
-    "prompt": "Rotting oranges problem uses?",
+    "title": "Prim\u2019s Algorithm",
+    "prompt": "Prim\u2019s algorithm grows the MST by?",
     "choices": [
-      "Multi-source BFS",
-      "Binary Search",
-      "DP",
-      "Trie"
+      "Choosing max edge",
+      "Choosing min edge",
+      "Choosing median edge",
+      "Choosing random edge"
     ],
-    "answer": 0,
-    "difficulty": -0.1
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 73,
-    "title": "Graphs - Word Ladder",
-    "prompt": "Word Ladder uses?",
+    "title": "Prim\u2019s Algorithm",
+    "prompt": "Prim\u2019s algorithm grows the MST by?",
     "choices": [
-      "BFS",
-      "DFS",
-      "DP",
-      "Greedy"
+      "Choosing max edge",
+      "Choosing min edge",
+      "Choosing median edge",
+      "Choosing random edge"
     ],
-    "answer": 0,
-    "difficulty": 0.8
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 74,
-    "title": "Graphs - Alien Dictionary",
-    "prompt": "Alien dictionary uses?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "Topological Sort",
-      "Greedy",
-      "DP",
-      "BST"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": 0.9
+    "difficulty": 0.0
   },
   {
     "id": 75,
-    "title": "Graphs - Course Schedule",
-    "prompt": "Course schedule uses?",
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
     "choices": [
-      "Topological Sort / Cycle Detection",
       "Greedy",
-      "Sorting",
-      "Binary Search"
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
     ],
-    "answer": 0,
-    "difficulty": 0.4
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 76,
-    "title": "Graphs - Graph Coloring",
-    "prompt": "Graph coloring uses?",
+    "title": "Ford-Fulkerson",
+    "prompt": "Ford-Fulkerson computes?",
     "choices": [
-      "Backtracking",
-      "Binary search",
-      "DP",
-      "Sorting"
+      "Shortest path",
+      "Minimum cut",
+      "Maximum flow",
+      "Topological order"
     ],
-    "answer": 0,
-    "difficulty": 0.9
+    "answer": 2,
+    "difficulty": 0.0
   },
   {
     "id": 77,
-    "title": "Graphs - Clone Graph",
-    "prompt": "Clone Graph problem uses which approach?",
+    "title": "Prim\u2019s Algorithm",
+    "prompt": "Prim\u2019s algorithm grows the MST by?",
     "choices": [
-      "BFS/DFS + HashMap",
-      "Binary Search",
-      "Heap only",
-      "DP"
+      "Choosing max edge",
+      "Choosing min edge",
+      "Choosing median edge",
+      "Choosing random edge"
+    ],
+    "answer": 1,
+    "difficulty": 0.0
+  },
+  {
+    "id": 78,
+    "title": "Quick Sort Pivot",
+    "prompt": "What impacts QuickSort performance most?",
+    "choices": [
+      "Pivot choice",
+      "Stack size",
+      "Variable names",
+      "OS type"
     ],
     "answer": 0,
-    "difficulty": 0.7
+    "difficulty": 0.0
+  },
+  {
+    "id": 79,
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
+    "choices": [
+      "Greedy",
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
+    ],
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 80,
-    "title": "Math - Sieve of Eratosthenes",
-    "prompt": "What is the time complexity of generating primes using the Sieve of Eratosthenes?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "O(n log log n)",
-      "O(n log n)",
-      "O(log n)",
-      "O(n^2)"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": 0.2
+    "difficulty": 0.0
   },
   {
     "id": 81,
-    "title": "Math - Fast Exponentiation",
-    "prompt": "Binary exponentiation computes a^b in?",
+    "title": "Quick Sort Pivot",
+    "prompt": "What impacts QuickSort performance most?",
     "choices": [
-      "O(log b)",
-      "O(b)",
-      "O(b log b)",
-      "O(1)"
+      "Pivot choice",
+      "Stack size",
+      "Variable names",
+      "OS type"
     ],
     "answer": 0,
-    "difficulty": -0.2
+    "difficulty": 0.0
   },
   {
     "id": 82,
-    "title": "Math - GCD Euclid Algorithm",
-    "prompt": "Euclid\u2019s algorithm for GCD runs in?",
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
     "choices": [
-      "O(log(min(a,b)))",
-      "O(n)",
-      "O(n log n)",
-      "O(1)"
+      "Greedy",
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
     ],
-    "answer": 0,
-    "difficulty": -0.3
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 83,
-    "title": "Bit Manipulation - Single Number",
-    "prompt": "Which operator helps find the single non-repeating element?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "XOR",
-      "AND",
-      "OR",
-      "NOT"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": -0.4
+    "difficulty": 0.0
   },
   {
     "id": 84,
-    "title": "Bit Manipulation - Count Set Bits",
-    "prompt": "Kernighan\u2019s algorithm for counting set bits runs in?",
+    "title": "Ford-Fulkerson",
+    "prompt": "Ford-Fulkerson computes?",
     "choices": [
-      "O(k)",
-      "O(n)",
-      "O(log n)",
-      "O(n log n)"
+      "Shortest path",
+      "Minimum cut",
+      "Maximum flow",
+      "Topological order"
     ],
-    "answer": 0,
-    "difficulty": 0.1
+    "answer": 2,
+    "difficulty": 0.0
   },
   {
     "id": 85,
-    "title": "DP - Palindromic Substrings",
-    "prompt": "DP to count palindromic substrings runs in?",
+    "title": "Ford-Fulkerson",
+    "prompt": "Ford-Fulkerson computes?",
     "choices": [
-      "O(n^2)",
-      "O(n)",
-      "O(n log n)",
-      "O(n^3)"
+      "Shortest path",
+      "Minimum cut",
+      "Maximum flow",
+      "Topological order"
     ],
-    "answer": 0,
-    "difficulty": 0.5
+    "answer": 2,
+    "difficulty": 0.0
   },
   {
     "id": 86,
-    "title": "DP - Decode Ways",
-    "prompt": "Decode ways DP runs in which time?",
+    "title": "Quick Sort Pivot",
+    "prompt": "What impacts QuickSort performance most?",
     "choices": [
-      "O(n)",
-      "O(n log n)",
-      "O(n^2)",
-      "O(1)"
+      "Pivot choice",
+      "Stack size",
+      "Variable names",
+      "OS type"
     ],
     "answer": 0,
-    "difficulty": 0.8
+    "difficulty": 0.0
   },
   {
     "id": 87,
-    "title": "DP - House Robber II",
-    "prompt": "House Robber II uses which technique?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "Two DP passes",
-      "Binary search",
-      "Graph BFS",
-      "Trie"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": 0.6
+    "difficulty": 0.0
   },
   {
     "id": 88,
-    "title": "DP - Burst Balloons",
-    "prompt": "Burst balloons dynamic programming takes?",
+    "title": "Quick Sort Pivot",
+    "prompt": "What impacts QuickSort performance most?",
     "choices": [
-      "O(n^3)",
-      "O(n^2)",
-      "O(n log n)",
-      "O(log n)"
+      "Pivot choice",
+      "Stack size",
+      "Variable names",
+      "OS type"
     ],
     "answer": 0,
-    "difficulty": 1.3
+    "difficulty": 0.0
   },
   {
     "id": 89,
-    "title": "DP - Partition Array for Maximum Sum",
-    "prompt": "Partition array for maximum sum runs in?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "O(nk)",
-      "O(n)",
-      "O(n^2)",
-      "O(k)"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": 0.9
+    "difficulty": 0.0
   },
   {
     "id": 90,
-    "title": "Graphs - Shortest Path in Binary Matrix",
-    "prompt": "Shortest path in binary matrix uses?",
+    "title": "Prim\u2019s Algorithm",
+    "prompt": "Prim\u2019s algorithm grows the MST by?",
     "choices": [
-      "8-direction BFS",
-      "DFS",
-      "DP",
-      "Greedy"
+      "Choosing max edge",
+      "Choosing min edge",
+      "Choosing median edge",
+      "Choosing random edge"
     ],
-    "answer": 0,
-    "difficulty": 0.7
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 91,
-    "title": "Graphs - Number of Islands II",
-    "prompt": "Number of Islands II uses?",
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
     "choices": [
-      "Union-Find",
-      "DFS only",
-      "DP",
-      "Stack"
+      "Greedy",
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
     ],
-    "answer": 0,
-    "difficulty": 0.9
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 92,
-    "title": "Graphs - Reconstruct Itinerary",
-    "prompt": "Reconstruct itinerary uses?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "Hierholzer's Algorithm",
-      "Dijkstra",
-      "DFS only",
-      "Binary search"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": 1.0
+    "difficulty": 0.0
   },
   {
     "id": 93,
-    "title": "Graphs - Cheapest Flight Within K Stops",
-    "prompt": "Cheapest flight within K stops uses?",
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
     "choices": [
-      "Bellman-Ford",
-      "Binary Search",
       "Greedy",
-      "DSU"
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
     ],
-    "answer": 0,
-    "difficulty": 0.7
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 94,
-    "title": "Graphs - Swim in Rising Water",
-    "prompt": "Swim in rising water is solved using?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "Binary search + BFS or Dijkstra",
-      "DFS only",
-      "DP only",
-      "Greedy"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": 1.2
+    "difficulty": 0.0
   },
   {
     "id": 95,
-    "title": "Greedy - Reorganize String",
-    "prompt": "Reorganize string uses which structure?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "Max-Heap",
-      "Stack",
-      "Queue",
-      "Graph"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": 0.7
+    "difficulty": 0.0
   },
   {
     "id": 96,
-    "title": "Greedy - Split Array into Consecutive Subsequences",
-    "prompt": "Split array into subsequences uses?",
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
     "choices": [
-      "Greedy + HashMap + Min-Heap",
-      "Binary search",
-      "DP",
-      "Trie"
+      "Greedy",
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
     ],
-    "answer": 0,
-    "difficulty": 1.1
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 97,
-    "title": "Greedy - Remove K Digits",
-    "prompt": "Remove K digits to form smallest number uses?",
+    "title": "Prim\u2019s Algorithm",
+    "prompt": "Prim\u2019s algorithm grows the MST by?",
     "choices": [
-      "Monotonic Stack",
-      "DP",
-      "Trie",
-      "Heap"
+      "Choosing max edge",
+      "Choosing min edge",
+      "Choosing median edge",
+      "Choosing random edge"
     ],
-    "answer": 0,
-    "difficulty": 0.8
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 98,
-    "title": "Greedy - Maximum Performance of a Team",
-    "prompt": "Maximum team performance uses?",
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
     "choices": [
-      "Sorting + Min-Heap",
-      "DFS",
-      "DP",
-      "Binary search"
+      "Greedy",
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
     ],
-    "answer": 0,
-    "difficulty": 1.0
+    "answer": 1,
+    "difficulty": 0.0
   },
   {
     "id": 99,
-    "title": "Hard - N Queens",
-    "prompt": "The N-Queens problem primarily uses?",
+    "title": "Master Theorem",
+    "prompt": "What is the recurrence form solved by Master Theorem?",
     "choices": [
-      "Backtracking",
-      "DP",
-      "Binary Search",
-      "DFS only"
+      "T(n)=aT(n/b)+f(n)",
+      "T(n)=T(n-1)+1",
+      "T(n)=2T(n)+1",
+      "T(n)=nT(n)"
     ],
     "answer": 0,
-    "difficulty": 1.4
+    "difficulty": 0.0
+  },
+  {
+    "id": 100,
+    "title": "Knapsack",
+    "prompt": "0/1 Knapsack uses which paradigm?",
+    "choices": [
+      "Greedy",
+      "Dynamic Programming",
+      "Divide and Conquer",
+      "Brute force"
+    ],
+    "answer": 1,
+    "difficulty": 0.0
   }
 ]
