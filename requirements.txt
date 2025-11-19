@@ -1,3 +1,4 @@
+supabase
 flask
 flask-cors
 gunicorn
